@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>星际人格象限测试</title>
+    <style>
+        body {
+            font-family: '微软雅黑', sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #000046, #1cb5e0);
+            color: white;
+        }
+        .question {
+            margin: 20px 0;
+            padding: 15px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 10px;
+        }
+        .option {
+            display: inline-block;
+            margin: 5px;
+            padding: 8px 15px;
+            border: 2px solid #fff;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .option.selected {
+            background: rgba(255,255,255,0.3);
+            border-color: #ffd700;
+            box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+        }
+        #result {
+            display: none;
+            margin-top: 20px;
+            padding: 20px;
+            background: rgba(0,0,0,0.8);
+            border-radius: 15px;
+        }
+        .button {
+            width: 100%;
+            padding: 12px;
+            background: #ff6b6b;
+            border: none;
+            border-radius: 25px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 15px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center; color: #ffd700; text-shadow: 2px 2px #000;">星际人格象限测试</h1>
+    <p style="text-align: center; color: #87ceeb;">8道题速测你的宇宙专属属性（每题限选1个）</p>
+
+    <div class="question" data-question="1">
+        <h3>🌠 星际生存选择题（2题）</h3>
+        <p>1. 飞船在伸手不见五指的暗物质雾区迷路了，你会：</p>
+        <div class="option" data-option="A">A) 打开电脑仔细研究星图，用计算器算出安全路线（冷静分析派）</div>
+        <div class="option" data-option="B">B) 对着对讲机喊："有没有人啊！我是地球来的朋友！"（主动求助派）</div>
+        <div class="option" data-option="C">C) 不管那么多，猛踩油门朝着最亮的星星方向冲（冒险冲锋派）</div>
+        <div class="option" data-option="D">D) 用手指在舷窗的雾气上画箭头，边画边想办法（动手创意派）</div>
+    </div>
+
+    <div class="question" data-question="2">
+        <p>2. 遇到一种会吃掉记忆的外星怪物，你会：</p>
+        <div class="option" data-option="A">A) 马上掏出笔记本写公式，想用数学道理说服它（理性防御）</div>
+        <div class="option" data-option="B">B) 心里拼命想和家人吃火锅/和朋友打游戏的画面，希望它感受到温暖（情感攻击）</div>
+        <div class="option" data-option="C">C) 抄起飞船上的灭火器就喷，先跑出去再说（直接行动）</div>
+        <div class="option" data-option="D">D) 把它发出的声音录下来，编成一首洗脑歌让它跟着唱（创意化解）</div>
+    </div>
+
+    <div class="question" data-question="3">
+        <h3>🌌 超能力梦想清单（2题）</h3>
+        <p>3. 如果能选一种超能力，你最想要：</p>
+        <div class="option" data-option="A">A) 能看懂星星的"悄悄话"，知道它们什么时候会变亮变暗（星星翻译官）</div>
+        <div class="option" data-option="B">B) 不用说话，就能知道身边人的开心或难过（心灵小雷达）</div>
+        <div class="option" data-option="C">C) 生气时能爆发超强能量，像小太阳一样照亮整个宇宙（能量小炸弹）</div>
+        <div class="option" data-option="D">D) 把天上的云朵（星际尘埃）捏成小狗、飞船等各种形状（宇宙橡皮泥大师）</div>
+    </div>
+
+    <div class="question" data-question="4">
+        <p>4. 你最喜欢的宇宙标志是：</p>
+        <div class="option" data-option="A">A) 像齿轮一样精密转动的太空站（喜欢有规律的东西）</div>
+        <div class="option" data-option="B">B) 在星云中游来游去的透明大鱼（喜欢自由神秘的东西）</div>
+        <div class="option" data-option="C">C) 能自己复制自己的六边形小飞船（喜欢不断变强的东西）</div>
+        <div class="option" data-option="D">D) 表面闪着荧光花纹的彩色星球（喜欢漂亮特别的东西）</div>
+    </div>
+
+    <div class="question" data-question="5">
+        <h3>🛸 团队合作小测试（2题）</h3>
+        <p>5. 组队去探索神秘星球，你最想找哪种队友？</p>
+        <div class="option" data-option="A">A) 学霸型：懂所有外星语言和数学公式（遇到问题能算明白）</div>
+        <div class="option" data-option="B">B) 暖心型：总能安慰大家，让团队不吵架（气氛组组长）</div>
+        <div class="option" data-option="C">C) 运动型：能在失重环境下快速修飞船、打怪兽（行动超快超厉害）</div>
+        <div class="option" data-option="D">D) 手工型：能用垃圾造出有用的工具（变废为宝小能手）</div>
+    </div>
+
+    <div class="question" data-question="6">
+        <p>6. 发现一块会发光的"宇宙水晶"，你会：</p>
+        <div class="option" data-option="A">A) 用显微镜研究它的内部结构（想知道它为什么发光）</div>
+        <div class="option" data-option="B">B) 每天跟它说自己的心事，把它当好朋友（想和它变熟）</div>
+        <div class="option" data-option="C">C) 把它装到飞船上，让飞船飞得更快（想用来解决问题）</div>
+        <div class="option" data-option="D">D) 按照它的光的颜色，编一首飞船航行的歌（想让它变有趣）</div>
+    </div>
+
+    <div class="question" data-question="7">
+        <h3>🌠 宇宙终极问答（2题）</h3>
+        <p>7. 你觉得宇宙像什么？</p>
+        <div class="option" data-option="A">A) 一个巨大的钟表，每颗星星都按规律转动（一切都有规则）</div>
+        <div class="option" data-option="B">B) 一个热闹的大操场，所有星球都在互相打招呼（充满感情交流）</div>
+        <div class="option" data-option="C">C) 一个超级大的闯关游戏，到处都有挑战等着我们（需要不断冒险）</div>
+        <div class="option" data-option="D">D) 一个巨大的美术教室，星星和星云都是画家的作品（充满创造可能）</div>
+    </div>
+
+    <div class="question" data-question="8">
+        <p>8. 如果永远住在宇宙里，你想住在哪里？</p>
+        <div class="option" data-option="A">A) 一个安静的小太空站，每天观察星星的变化（喜欢安静研究）</div>
+        <div class="option" data-option="B">B) 一艘流浪飞船，跟着大家去不同星球交朋友（喜欢认识新伙伴）</div>
+        <div class="option" data-option="C">C) 最前线的探险舰队，专门去没人去过的危险地方（喜欢刺激挑战）</div>
+        <div class="option" data-option="D">D) 一颗即将消失的星星旁边，用画笔记录它最后的样子（喜欢创造美好）</div>
+    </div>
+
+    <button class="button" onclick="calculateResult()">点击生成你的星际人格</button>
+
+    <div id="result">
+        <h2>✨ 测试结果 ✨</h2>
+        <p>各选项选择次数：<span id="counts"></span></p>
+        <p id="personality"></p>
+        <p id="nickname" style="color: #ffd700; font-size: 1.2em; margin-top: 10px;"></p>
+    </div>
+
+    <script>
+        const counts = { A: 0, B: 0, C: 0, D: 0 };
+        const selected = {}; // 存储每个题目的选中选项
+
+        // 初始化题目分组监听
+        document.querySelectorAll('.question').forEach(question => {
+            const qNum = question.dataset.question;
+            question.querySelectorAll('.option').forEach(option => {
+                option.addEventListener('click', function() {
+                    // 清除同题其他选项的选中状态
+                    question.querySelectorAll('.option').forEach(opt => opt.classList.remove('selected'));
+                    this.classList.add('selected');
+                    
+                    // 更新选中记录和计数
+                    const oldOpt = selected[qNum];
+                    if (oldOpt) counts[oldOpt]--; // 替换选择时减少旧选项计数
+                    const newOpt = this.dataset.option;
+                    counts[newOpt]++;
+                    selected[qNum] = newOpt;
+                });
+            });
+        });
+
+        function calculateResult() {
+            // 检查是否所有题目都已作答
+            for (let i = 1; i <= 8; i++) {
+                if (!selected[i]) {
+                    alert(`请完成第${i}题选择！`);
+                    return;
+                }
+            }
+
+            const max = Math.max(counts.A, counts.B, counts.C, counts.D);
+            let resultType, resultNickname;
+
+            if (counts.A === max) {
+                resultType = '黑洞智者';
+                resultNickname = '星空计算器';
+            } else if (counts.B === max) {
+                resultType = '脉冲星使者';
+                resultNickname = '星际小暖炉';
+            } else if (counts.C === max) {
+                resultType = '超新星探险家';
+                resultNickname = '能量小火箭';
+            } else {
+                resultType = '星云构形者';
+                resultNickname = '星云小画家';
+            }
+
+            document.getElementById('counts').textContent = 
+                `A: ${counts.A} | B: ${counts.B} | C: ${counts.C} | D: ${counts.D}`;
+            document.getElementById('personality').textContent = 
+                `你是「${resultType}」：\n${getDescription(resultType)}`;
+            document.getElementById('nickname').textContent = 
+                `你的宇宙小外号：${resultType}·${resultNickname}`;
+            document.getElementById('result').style.display = 'block';
+        }
+
+        // 辅助函数：获取人格描述
+        function getDescription(type) {
+            return {
+                '黑洞智者': '像一本会走路的百科全书，遇到问题先冷静分析，擅长从复杂的信息里找到规律，是团队里的"大脑担当"！',
+                '脉冲星使者': '像一个温暖的小太阳，总能感受到别人的情绪，擅长用微笑和关心让大家团结在一起，是团队里的"心灵担当"！',
+                '超新星探险家': '像一颗充满能量的小火箭，想到什么就立刻去做，遇到困难也不怕，喜欢挑战未知，是团队里的"勇气担当"！',
+                '星云构形者': '像一个充满创意的小画家，总能把普通的东西变得有趣，擅长用想象力解决问题，是团队里的"创意担当"！',
+            }[type];
+        }
+    </script>
+</body>
+</html>
